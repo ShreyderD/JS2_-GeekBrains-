@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS-2 Lesson 2 - eShop</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="shortcut icon" href="eshop_tmb.jpg" type="image/png">
+    <link rel="stylesheet" href="chatbox.css">
+
+    <script defer src="chatbox.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        bode {
+            //position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid #eee;
+        }
+
+        .cart-button {
+            background: #44b96e;
+            color: #fff;
+            display: block;
+            width: 180px;
+            border-radius: 6px;
+        }
+
+        .cart-items-counter {}
+
+        .cart-container {
+            margin: 20px 0;
+            padding: 40px;
+            background: #eee;
+        }
+
+        .cart-inside {
+            margin: 20px 0;
+        }
+
+        .sum-goods {
+            margin: 20px;
+        }
+
+        main {
+            width: 100%;
+            min-height: 80vh;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        .goods-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .goods-item {
+            min-width: 200px;
+            height: 220px;
+            background: #fbfbfb;
+            box-shadow: 0px 2px 10px #b7b7b7;
+            margin: 5px;
+            padding: 12px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .item-title {
+            margin: 8px 0;
+            font-size: 18px;
+        }
+
+        .item-price {
+            margin: 14px 0;
+            font-size: 14px;
+        }
+
+        .add2cart {
+            padding: 4px 16px;
+            color: #fff;
+            background: #333;
+            border-radius: 6px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .add2cart:hover {
+            color: #333;
+            background: #fff;
+            border: 1px solid #777;
+        }
+
+        .cart-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .item-line {
+            height: 32px;
+        }
+        .cart-item-title {
+            display: inline-block;
+            min-width: 160px;
+        }
+        .cart-item-price {
+            min-width: 120px;
+        }
+
+        .delete-item {
+            margin: 0 120px;
+            padding: 4px 8px;
+            color: #fff;
+            background: #000;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .delete-item:hover {
+            color: #fff;
+            background: #444;
+        }
+
+        .clear-cart {
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            background: #888;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .clear-cart:hover {
+            color: #000;
+            background: #777;
+        }
+
+        .item-image {
+            background-image: url(eshop_tmb.jpg);
+            height: 90px;
+            width: 90%;
+            margin: auto;
+        }
+
+        footer {
+            display: flex;
+            height: 120px;
+            background: #333;
+        }
+
+        .footer-title {
+            margin: auto;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="#">Home</a></div>
+        <div class="cart">
+            <button class="cart-button">Корзина: <span class="cart-items-counter">0 items</span></button>
+        </div>
+
+    </header>
+    <div class="sum-goods"></div>
+    <main>
+        <div class="goods-list"></div>
+        <div class="cart-container">
+            <h4 id="cart-my">Cart:</h4>
+            <div class="cart-box">
+                <div class="cart-inside">Your cart is empty</div>
+                <div class="clear-cart">Clear Cart</div>
+            </div>
+        </div>
+    </main>
+
+    <div class="chat-box"></div>
+    <footer>
+        <div class="footer-title">Just another Footer</div>
+    </footer>
+
+    <!-- <script src="cart-classes.js"></script>
+    <!-- <script src="cart-classless.js"></script> -->
+    <script src="cart-classes1.js"></script>
+</body></html>
