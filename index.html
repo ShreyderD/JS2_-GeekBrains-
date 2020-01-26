@@ -14,10 +14,6 @@
             box-sizing: border-box;
         }
 
-        bode {
-            //position: relative;
-        }
-
         header {
             display: flex;
             justify-content: space-between;
@@ -25,6 +21,26 @@
             border: 1px solid #eee;
         }
 
+        .logo {
+            width: 120px;
+            text-align: center;
+            background: #ff9000;
+            padding: 12px;
+            border-radius: 20px;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+            background: #bf6c00;
+        }
+
+        .logo a {
+            color: #fff;
+        }
+        .catalog-title {
+            text-align: center;
+            padding: 24px;
+        }
         .cart-button {
             background: #44b96e;
             color: #fff;
@@ -42,6 +58,7 @@
         }
 
         .cart-inside {
+            width: 100%;
             margin: 20px 0;
         }
 
@@ -54,6 +71,10 @@
             min-height: 80vh;
             margin: 20px 0;
             padding: 0 20px;
+        }
+        .goods-list-container {
+            display: flex;
+            padding: 20px 0 40px 0;
         }
 
         .goods-list {
@@ -99,34 +120,22 @@
         }
 
         .cart-box {
+            width: 100%;
             display: flex;
             justify-content: space-between;
         }
-        .item-line {
-            height: 32px;
-        }
-        .cart-item-title {
-            display: inline-block;
-            min-width: 160px;
-        }
-        .cart-item-price {
-            min-width: 120px;
+
+        .cart-top {
+            display: flex;
+            justify-content: space-between;
         }
 
-        .delete-item {
-            margin: 0 120px;
-            padding: 4px 8px;
-            color: #fff;
-            background: #000;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-        .delete-item:hover {
-            color: #fff;
-            background: #444;
+        #cart-my {
+            display: inline-block;
         }
 
         .clear-cart {
+            display: inline-block;
             width: 200px;
             height: 40px;
             text-align: center;
@@ -135,11 +144,73 @@
             background: #888;
             border-radius: 8px;
             cursor: pointer;
+            clear: both;
         }
 
         .clear-cart:hover {
             color: #000;
             background: #777;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr:first-child {
+            border-bottom: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .cartTh {
+            width: 100%;
+
+            padding: 10px;
+            background: #fff;
+        }
+
+        .cartTh__qty {}
+
+        .cartTh__action {
+            margin: 0 20px;
+            padding: 4px 8px;
+        }
+
+        .item-line {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .cartTh__name,
+        .cart-item-title {
+            display: inline-block;
+        }
+
+        .cartTh__price,
+        .cart-item-price {}
+
+        .delete-item {
+            margin: 0 20px;
+            padding: 4px 8px;
+            color: #fff;
+            background: #999;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .delete-item:hover {
+            color: #fff;
+            background: #444;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 30px;
         }
 
         .item-image {
@@ -172,13 +243,20 @@
     </header>
     <div class="sum-goods"></div>
     <main>
-        <div class="goods-list"></div>
+       <h1 class="catalog-title">CATALOG</h1>
+        <div class="goods-list-container">
+            <div class="goods-list"></div>
+        </div>
         <div class="cart-container">
-            <h4 id="cart-my">Cart:</h4>
-            <div class="cart-box">
-                <div class="cart-inside">Your cart is empty</div>
+            <div class="cart-top">
+                <h4 id="cart-my">CART</h4>
                 <div class="clear-cart">Clear Cart</div>
             </div>
+            <div class="cart-box">
+                <div class="cart-inside">Your cart is empty</div>
+
+            </div>
+            <div class="cart-total"></div>
         </div>
     </main>
 
@@ -187,7 +265,7 @@
         <div class="footer-title">Just another Footer</div>
     </footer>
 
-    <!-- <script src="cart-classes.js"></script>
+    <script src="cart-classes.js"></script>
     <!-- <script src="cart-classless.js"></script> -->
-    <script src="cart-classes1.js"></script>
+    <!-- <script src="cart-classes1.js"></script> -->
 </body></html>
