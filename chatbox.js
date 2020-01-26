@@ -1,5 +1,5 @@
 //version 1 (correct one!)
-/*
+
 class MessageProto {
     constructor() {
         this.allMessages = [];
@@ -95,7 +95,7 @@ class MessageProto {
 
 let chat = new MessageProto();
 chat.messageInput();
-*/
+
 
 
 
